@@ -1,0 +1,15 @@
+create table eventos (
+event_id int(11) not null AUTO_INCREMENT,
+event_title varchar(80) default null,
+event_desc text,
+event_start TIMESTAMP not null default '0000-00-00 00:00:00',
+event_end TIMESTAMP not null default '0000-00-00 00:00:00',
+
+primary key (event_id),
+index(event_start)
+) ENGINE=MyISAM CHARACTER SET utf8 COLLATE utf8_unicode_ci
+;
+INSERT INTO `eventos` (`event_title`, `event_desc`, `event_start`, `event_end`) 
+VALUES ('Ano Novo', 'Feliz Ano Novo!', '2010-01-01 00:00:00', '2010-01-01 23:59:59'),
+('Último dia de Janeiro', 'Último dia do mês!', '2010-01-31 00:00:00', '2010-01-31 23:59:59');
+;
